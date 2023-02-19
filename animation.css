@@ -1,0 +1,70 @@
+*{
+    background-image:url("animation_background.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+#characters{
+    display: flex;
+    height: 25%;
+    align-items: baseline;
+    margin-left: 70%;
+    width: 14%;
+    position: absolute;
+}
+#shinchan{
+    margin-left: -2%;
+    width: 39%;
+    height: 59%;
+    visibility: hidden;
+    animation-name: appear;
+    animation-iteration-count: infinite;
+    animation-duration: 20s;
+}
+.right_move img{
+    position: absolute;
+    height: 97%;
+    margin-left: 61%;
+    background: none;
+    transform: translateX(100%);
+    animation: right_move 20s ease infinite;
+}
+#midshi{
+    width: 44%;
+    height: 105%;
+}
+#space{
+    height: 64%;
+    width: 100%;
+}
+
+.right_move{
+    margin-top: -8%;
+    background: transparent;
+    height: 52%;
+    position: relative;
+    overflow: hidden;
+}
+@keyframes right_move{
+        0%   { 
+            transform: translateX(-250%);
+        }
+        40%   { 
+            transform: translateX(0%); 		
+        }
+        60%   { 
+            transform: translateX(0%); 		
+        }
+        100% { 
+            transform: translateX(150%); 
+        }
+}
+@keyframes appear{
+    40%{
+        visibility: hidden;
+    }
+    60%{
+        visibility: visible;
+    }
+
+}
